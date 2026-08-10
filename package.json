@@ -1,0 +1,20 @@
+{
+  "name": "cinemaos",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=20.19.5",
+    "pnpm": ">=10.34.5"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @cinemaos/web dev",
+    "build": "pnpm --filter @cinemaos/web build",
+    "typecheck": "pnpm --filter @cinemaos/web typecheck",
+    "api:dev": "cd services/agent-api && uvicorn app.main:app --reload --port 8080",
+    "cine:health": "python scripts/cine_health.py"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

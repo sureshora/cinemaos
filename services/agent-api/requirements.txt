@@ -1,0 +1,6 @@
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic>=2.10
+python-dotenv>=1.0
+google-adk>=1.29.0
+parallel-web>=0.2
