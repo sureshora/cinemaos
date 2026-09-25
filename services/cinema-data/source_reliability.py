@@ -97,3 +97,14 @@ def aggregate_source_confidence(
         label = "unknown"
 
     return {"score": confidence, "label": label, "sources": scored}
+
+
+def rank_evidence(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    ranked = []
+    for item in items:
+        score = score_source(item)
+        if item.get("corroborated"): score["score"] = min(1.0, round(score["score"] + 0.05, 3))
+        if item.get("temporally_consistent"): score["score"] = min(1.0, round(score["score"] + 0.03, 3))
+        if item.get("conflicting"): score["score"] = max(0.0, round(score["score"] - 0.20, 3))
+        ranked.append({**item, "reliability": score})
+    return sorted(ranked, key=lambda item: item["reliability"]["score"], reverse=True)
