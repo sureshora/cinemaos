@@ -32,3 +32,4 @@ def get_artist(canonical_artist_id: str) -> dict[str, Any] | None:
         if str(record.get("canonical_artist_id") or record.get("id")) == canonical_artist_id:
             return record
     return None
+\n\ndef artist_sources(canonical_artist_id: str) -> list[dict[str, object]]:\n    record = get_artist(canonical_artist_id)\n    return list(record.get("sources", [])) if record else []\n
