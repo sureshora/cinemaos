@@ -1,0 +1,23 @@
+[
+  {
+    "id": "artist-demo-001",
+    "name": "Demo Artist",
+    "industry": "Tamil",
+    "languages": ["Tamil", "Telugu"],
+    "roles": ["Actor"],
+    "summary": "Demo record for validating the CinemaOS historical artist intelligence UI.",
+    "career_events": [
+      {"year": 1985, "event_type": "DEBUT", "title": "Film Debut", "description": "Demo event.", "source_url": ""},
+      {"year": 1992, "event_type": "FILM", "title": "Representative Film", "description": "Demo credit.", "source_url": ""},
+      {"year": 2005, "event_type": "AWARD", "title": "Recognition", "description": "Demo award.", "source_url": ""}
+    ],
+    "filmography": [
+      {"year": 1985, "title": "Debut Film", "language": "Tamil", "role": "Actor"},
+      {"year": 1992, "title": "Representative Film", "language": "Tamil", "role": "Actor"}
+    ],
+    "awards": [{"year": 2005, "name": "Demo Award", "category": "Acting", "result": "Won"}],
+    "social_links": {"instagram": "", "youtube": "", "x": "", "facebook": ""},
+    "media": [],
+    "sources": []
+  }
+]
