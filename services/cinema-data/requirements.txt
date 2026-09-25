@@ -1,1 +1,2 @@
 # Runtime dependency-free core. Collectors may declare their own optional dependencies.
+requests>=2.32,<3
