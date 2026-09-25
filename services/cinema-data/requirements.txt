@@ -1,0 +1,1 @@
+# Runtime dependency-free core. Collectors may declare their own optional dependencies.
