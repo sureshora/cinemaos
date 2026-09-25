@@ -11,11 +11,11 @@ def ingest_records(
     store: CinemaKnowledgeStore,
 ) -> dict[str, Any]:
     """Normalize the resolved records and persist them without losing history."""
-    resolved, review_queue = resolve_artist_records(records)
+    records = list(records)\n    resolved, review_queue = resolve_artist_records(records)
     path = store.upsert(resolved)
 
     return {
-        "records_received": len(list(records)) if not isinstance(records, list) else len(records),
+        "records_received": len(records),
         "records_resolved": len(resolved),
         "review_queue": review_queue,
         "store_path": str(path),
